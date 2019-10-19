@@ -35,6 +35,10 @@ namespace Kardif.Web.Controllers
         {
             var dictionary = this.HttpContext.Request.Params.ToDictionary();
             var message = MailController.Message;
+
+
+            dictionary = CleanUpDict(dictionary);
+
             foreach (KeyValuePair<string, string> keyValuePair in dictionary)
             {
                 if (!string.IsNullOrEmpty(keyValuePair.Value))
@@ -46,6 +50,42 @@ namespace Kardif.Web.Controllers
             }
 
             return this.Json((object) MailHelper.SendMail(message, (string) null));
+        }
+
+        private Dictionary<string, string> CleanUpDict(Dictionary<string, string> dictionary)
+        {
+            var outdict = new Dictionary<string,string>();
+            foreach (var kv in dictionary)
+            {
+                switch (kv.Key)
+                {
+                    case "action":
+                        outdict.Add(kv.Key, CleanComma(kv.Value));
+                        break;
+                    case "token":
+                        outdict.Add(kv.Key, CleanComma(kv.Value));
+                        break;
+                    case "selectedYear":
+                        outdict.Add(kv.Key, CleanComma(kv.Value));
+                        break;
+                    case "selectedPrice":
+                        outdict.Add(kv.Key, CleanComma(kv.Value));
+                        break;
+                    case "mileage":
+                        outdict.Add(kv.Key, CleanComma(kv.Value));
+                        break;
+                default:
+                        outdict.Add(kv.Key,kv.Value);
+                        break;
+                }
+            }
+
+            return outdict;
+        }
+
+        private string CleanComma(string kvValue)
+        {
+            return kvValue.Split(',').First();
         }
     }
 }
