@@ -151,6 +151,8 @@
     <Content Include="js\jquery.maskedinput.js" />
     <Content Include="js\jquery.waypoints.min.js" />
     <Content Include="js\script.js" />
+    <Content Include="robots.txt" />
+    <Content Include="tempindex.html" />
     <Content Include="Templates\Mail.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -165,9 +167,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\bnpp-rounded-bold-v2.eot" />
     <Content Include="fonts\bnpp-rounded-bold-v2.ttf" />
@@ -176,6 +176,9 @@
     <Content Include="fonts\bnpp-rounded-v2.ttf" />
     <Content Include="fonts\bnpp-rounded-v2.woff" />
     <None Include="packages.config" />
+    <Content Include="Маска_полиса_Авито_Черновик.pdf" />
+    <Content Include="Памятка_клиента_по_урегулированию.pdf" />
+    <Content Include="Правила_страхования_транспортных_средств_от_поломок.pdf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
