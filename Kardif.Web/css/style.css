@@ -263,7 +263,7 @@ button {
 }
 .calc-block {
     padding-bottom: 20px;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 .main .content {
     position: relative;
@@ -355,8 +355,18 @@ h1 em {
 .calc__right{
     @extend %bs;
     width: auto!important;
+    position: relative;
     padding: 30px 20px;
     background: #179e6e;
+}
+.calc__right:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #179e6e;
+    top: 0;
+    right: -3px;
 }
 .calc__right .form__fields{
     width: 100%;
@@ -389,6 +399,9 @@ h1 em {
     }
 }
 @media all and (max-width: 1000px) {
+    .calc__right:after {
+        display: none;
+    }
     .calc__left{
         margin-right: 0;
     }
@@ -1513,6 +1526,9 @@ h1 em {
 .form-block__phone {
     padding-left: 20px;
     padding-right: 20px;
+}
+.form-block__phone .privacy {
+    display: inline-block;
 }
 .form-block__center > .privacy {
     margin-left: auto;
