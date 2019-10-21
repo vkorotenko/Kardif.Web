@@ -584,7 +584,8 @@ $(document).ready(function() {
                 $('html').height($(window).height()).css('overflow', 'hidden');
                 $('.page-wrap').css('overflow', 'scroll');
                 $(self).find('input').val('');
-
+                $(self).find('textarea').val('');
+                $(self).find('.form-block__phone').removeClass('open');
                 $('.overlay').fadeIn(400,
                     function () {
                         $('.popup-thank')
