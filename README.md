@@ -28,11 +28,11 @@
 2. SmtpServer - почтовый сервер. Значение по умолчанию outlook.dtln.ru
 3. Port - порт почтового сервера. Значение по умолчанию 587
 4. EnableSsl - Использовать Ssl. Значение по умолчанию  **True** | False
-5. MailFrom - почта отправителя **warranty@cardif.ru**
-6. Password - пароль отправителя **Xdc3xn!n3Fl**
+5. MailFrom - почта отправителя **warranty@example.com**
+6. Password - пароль отправителя **123456789**
     
-7. MailTo - почтовый ящик получатель. **warranty@cardifrussia.ru**
-8. Caption - заголовок **КАРДИФ**
+7. MailTo - почтовый ящик получатель. **warranty@example.com**
+8. Caption - заголовок **_______**
 9. IsBodyHtml - отправлять тело письма как HTML. Значение по умолчанию  **True** | False
 
 
